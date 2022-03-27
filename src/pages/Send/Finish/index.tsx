@@ -25,7 +25,7 @@ const StyledContainer = styled.div`
 
 const StyledSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  jbusdify-content: space-between;
   align-items: flex-start;
   padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -129,7 +129,7 @@ const Finish = (): ReactElement => {
         style={{
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          jbusdifyContent: 'center',
           flexDirection: 'column',
           paddingBottom: 15,
         }}

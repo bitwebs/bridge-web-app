@@ -94,23 +94,23 @@ export const ibcRpc: Record<IbcNetwork, string> = {
 
 export const allowedCoins: Record<IbcNetwork, string[]> = {
   [BlockChainType.osmo]: [
-    AssetNativeDenomEnum.uusd,
+    AssetNativeDenomEnum.ubusd,
     AssetNativeDenomEnum.uluna,
-    AssetNativeDenomEnum.ukrw,
+    AssetNativeDenomEnum.ubkrw,
     'ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B',
   ],
   [BlockChainType.scrt]: [
-    AssetNativeDenomEnum.uusd,
+    AssetNativeDenomEnum.ubusd,
     AssetNativeDenomEnum.uluna,
     'ibc/EB2CED20AB0466F18BE49285E56B31306D4C60438A022EA995BA65D5E3CF7E09',
   ],
-  [BlockChainType.inj]: [AssetNativeDenomEnum.uusd, AssetNativeDenomEnum.uluna],
+  [BlockChainType.inj]: [AssetNativeDenomEnum.ubusd, AssetNativeDenomEnum.uluna],
   [BlockChainType.axelar]: [
-    AssetNativeDenomEnum.uusd,
+    AssetNativeDenomEnum.ubusd,
     AssetNativeDenomEnum.uluna,
   ],
-  //[BlockChainType.cosmos]: ['uusd', 'uluna'],
-  //[BlockChainType.cro]: ['uusd', 'uluna'],
+  //[BlockChainType.cosmos]: ['ubusd', 'uluna'],
+  //[BlockChainType.cro]: ['ubusd', 'uluna'],
 }
 
 export interface ExtTerraNetwork {

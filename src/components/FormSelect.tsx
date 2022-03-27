@@ -42,7 +42,7 @@ const StyledDropdownToggle = styled(StyledDropdown.Toggle)`
   box-shadow: 0 12px 7px -7px rgba(0, 0, 0, 0.34);
   background-color: ${COLOR.darkGray2};
   display: flex;
-  justify-content: space-between;
+  jbusdify-content: space-between;
   align-items: center;
   font-size: 16px;
   font-weight: 500;

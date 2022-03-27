@@ -6,7 +6,7 @@ import { ASSET, UTIL } from 'consts'
 
 import { AssetNativeDenomEnum } from 'types/asset'
 
-import ContractStore, { ShuttleUusdPairType } from 'store/ContractStore'
+import ContractStore, { ShuttleUbusdPairType } from 'store/ContractStore'
 
 import useMantle from './useMantle'
 import SendStore from 'store/SendStore'
@@ -25,7 +25,7 @@ query {
   `
 
 const getTerraMAssetPairContract = (
-  addressList: ShuttleUusdPairType
+  addressList: ShuttleUbusdPairType
 ): string => {
   const mapped = _.map(
     addressList,
@@ -70,7 +70,7 @@ const useShuttle = (): {
   }) => Promise<BigNumber>
 } => {
   const { fetchQuery } = useMantle()
-  const shuttleUusdPairs = useRecoilValue(ContractStore.shuttleUusdPairs)
+  const shuttleUbusdPairs = useRecoilValue(ContractStore.shuttleUbusdPairs)
   const etherVaultTokenList = useRecoilValue(ContractStore.etherVaultTokenList)
   const toBlockChain = useRecoilValue(SendStore.toBlockChain)
   const asset = useRecoilValue(SendStore.asset)
@@ -82,13 +82,13 @@ const useShuttle = (): {
     denom: string
     amount: BigNumber
   }): Promise<BigNumber> => {
-    const minUst = new BigNumber(ASSET.TERRA_DECIMAL)
+    const minBusd = new BigNumber(ASSET.TERRA_DECIMAL)
     const zeroDotOnePerAmount = amount.times(0.001).dp(0)
 
-    if (denom === AssetNativeDenomEnum.uusd) {
-      return zeroDotOnePerAmount.isGreaterThan(minUst)
+    if (denom === AssetNativeDenomEnum.ubusd) {
+      return zeroDotOnePerAmount.isGreaterThan(minBusd)
         ? zeroDotOnePerAmount
-        : minUst
+        : minBusd
     }
 
     const fetchResult = await fetchQuery({
@@ -101,8 +101,8 @@ const useShuttle = (): {
     }[] = fetchResult?.OracleDenomsExchangeRates.Result || []
 
     if (_.some(denomLunaPriceList)) {
-      const uusdLunaPrice = new BigNumber(
-        denomLunaPriceList.find((x) => x.Denom === AssetNativeDenomEnum.uusd)
+      const ubusdLunaPrice = new BigNumber(
+        denomLunaPriceList.find((x) => x.Denom === AssetNativeDenomEnum.ubusd)
           ?.Amount || 1
       )
       const targetLunaPrice =
@@ -111,14 +111,14 @@ const useShuttle = (): {
           : new BigNumber(
               denomLunaPriceList.find((x) => x.Denom === denom)?.Amount || 1
             )
-      const oneUstValueTargetPrice = targetLunaPrice
-        .div(uusdLunaPrice)
+      const oneBusdValueTargetPrice = targetLunaPrice
+        .div(ubusdLunaPrice)
         .times(ASSET.TERRA_DECIMAL)
         .dp(0)
 
-      return zeroDotOnePerAmount.isGreaterThan(oneUstValueTargetPrice)
+      return zeroDotOnePerAmount.isGreaterThan(oneBusdValueTargetPrice)
         ? zeroDotOnePerAmount
-        : oneUstValueTargetPrice
+        : oneBusdValueTargetPrice
     }
     return new BigNumber(0)
   }
@@ -130,12 +130,12 @@ const useShuttle = (): {
     contractAddress: string
     amount: BigNumber
   }): Promise<BigNumber> => {
-    const query = getTerraMAssetPairContract(shuttleUusdPairs)
+    const query = getTerraMAssetPairContract(shuttleUbusdPairs)
     const zeroDotOnePerAmount = amount.times(0.001)
 
     const etherVaultToken = etherVaultTokenList[asset?.terraToken || '']
     if (etherVaultToken && toBlockChain === BlockChainType.ethereum) {
-      const tokenPrice = await etherVaultToken.getPricePerUst()
+      const tokenPrice = await etherVaultToken.getPricePerBusd()
       const minimumPrice = UTIL.toBignumber('1')
         .div(tokenPrice)
         .multipliedBy(ASSET.TERRA_DECIMAL)
@@ -164,20 +164,20 @@ const useShuttle = (): {
       []
 
     if (_.some(assets)) {
-      const uusd = new BigNumber(
+      const ubusd = new BigNumber(
         assets.find(({ info }) => 'native_token' in info)?.amount ?? '1'
       )
       const token = new BigNumber(
         assets.find(({ info }) => 'token' in info)?.amount ?? '0'
       )
-      const oneUstValueTargetPrice = token
-        .div(uusd)
+      const oneBusdValueTargetPrice = token
+        .div(ubusd)
         .times(ASSET.TERRA_DECIMAL)
         .dp(0)
 
-      return zeroDotOnePerAmount.isGreaterThan(oneUstValueTargetPrice)
+      return zeroDotOnePerAmount.isGreaterThan(oneBusdValueTargetPrice)
         ? zeroDotOnePerAmount
-        : oneUstValueTargetPrice
+        : oneBusdValueTargetPrice
     }
     return new BigNumber(0)
   }

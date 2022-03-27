@@ -21,7 +21,7 @@ export class TerraWalletconnectQrcodeModal implements IQRCodeModal {
       `action=walletconnect_connect&payload=${btoa(JSON.stringify({ uri }))}`
     )
 
-    const value = `https://terrastation.page.link/?link=https://terra.money?${query}&apn=money.terra.station&ibi=money.terra.station&isi=1548434735`
+    const value = `https://terrastation.page.link/?link=https://iqchain.network?${query}&apn=money.terra.station&ibi=money.terra.station&isi=1548434735`
 
     const modal = createElement(TerraQRCodeModal, {
       value,

@@ -8,7 +8,7 @@ const api = new AxelarAPI('mainnet')
 
 const signerAuthority = Wallet.createRandom()
 
-export async function getDepositAddress(destinationAddress: string, toBlockChain: 'fantom' | 'avalanche', coin: 'uusd' | 'uluna'): Promise<string | undefined> {
+export async function getDepositAddress(destinationAddress: string, toBlockChain: 'fantom' | 'avalanche', coin: 'ubusd' | 'uluna'): Promise<string | undefined> {
   const signerAuthorityAddress = await signerAuthority.getAddress()
   const { validationMsg, otc } = await api.getOneTimeMessageToSign(
     signerAuthorityAddress

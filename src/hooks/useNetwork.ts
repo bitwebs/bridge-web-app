@@ -12,7 +12,7 @@ const useNetwork = (): {
   fromTokenAddress?: string
   toTokenAddress?: string
 } => {
-  const FINDER = 'https://finder.terra.money'
+  const FINDER = 'https://explore.iqchain.network'
   const asset = useRecoilValue(SendStore.asset)
   const fromBlockChain = useRecoilValue(SendStore.fromBlockChain)
   const toBlockChain = useRecoilValue(SendStore.toBlockChain)

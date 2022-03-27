@@ -31,7 +31,7 @@ const StyledModalHeader = styled.div`
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.25px;
-  justify-content: center;
+  jbusdify-content: center;
   @media ${STYLE.media.mobile} {
     padding-bottom: 26px;
   }
@@ -75,7 +75,7 @@ const DefaultModal = ({
           backgroundColor: 'rgba(0,0,0,.9)',
           display: 'flex',
           flexDirection: 'row',
-          justifyContent: 'center',
+          jbusdifyContent: 'center',
         },
       }}
     >

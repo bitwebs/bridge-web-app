@@ -10,7 +10,7 @@ export const getParameters = (
   destinationAddress: string,
   sourceChainName: string, // = 'axelar',
   destinationChainName: 'avalanche' | 'fantom',
-  asset_common_key: 'uusd' | 'uluna',
+  asset_common_key: 'ubusd' | 'uluna',
 ): AssetTransferObject => {
   /*
       info for sourceChainInfo and destinationChainInfo fetched from the ChainList module. 

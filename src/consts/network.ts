@@ -66,19 +66,19 @@ const ETH_CHAINID = {
 const INFURAID =
   process.env.REACT_APP_INFURAID || 'a2efa9feabf84deb8f4dc696adf8f360'
 
-const TERRA_EXTENSION = 'https://terra.money/extension'
+const TERRA_EXTENSION = 'https://iqchain.network/extension'
 const BSC_EXTENSION =
   'https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp'
 const KEPLR_EXTENSION =
   'https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap'
 const CHROME = 'https://google.com/chrome'
 
-const TERRA_ASSETS_URL = 'https://assets.terra.money'
+const TERRA_ASSETS_URL = 'https://assets.iqchain.network'
 
-const getEtherPricePerUst = async (): Promise<BigNumber> => {
+const getEtherPricePerBusd = async (): Promise<BigNumber> => {
   try {
     const fetchData = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+      'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=busd',
       {
         headers: {
           Accept: 'application/json',
@@ -87,7 +87,7 @@ const getEtherPricePerUst = async (): Promise<BigNumber> => {
       }
     ).then((val) => val.json())
 
-    return UTIL.toBignumber(fetchData?.ethereum.usd || '0')
+    return UTIL.toBignumber(fetchData?.ethereum.busd || '0')
   } catch {
     return UTIL.toBignumber('0')
   }
@@ -97,21 +97,21 @@ const ETH_VAULT_TOKEN_LIST: Record<
   'mainnet' | 'testnet',
   Record<
     string,
-    { ether: string; vault: string; getPricePerUst: () => Promise<BigNumber> }
+    { ether: string; vault: string; getPricePerBusd: () => Promise<BigNumber> }
   >
 > = {
   mainnet: {
     terra1dzhzukyezv0etz22ud940z7adyv7xgcjkahuun: {
       ether: '0x707F9118e33A9B8998beA41dd0d46f38bb963FC8',
       vault: '0xF9dcf31EE6EB94AB732A43c2FbA1dC6179c98965',
-      getPricePerUst: getEtherPricePerUst,
+      getPricePerBusd: getEtherPricePerBusd,
     },
   },
   testnet: {
     terra19mkj9nec6e3y5754tlnuz4vem7lzh4n0lc2s3l: {
       ether: '0xA60100d5e12E9F83c1B04997314cf11685A618fF',
       vault: '0xDD7e8f8047D78bB103FAb4bAc1259Da207Da3861',
-      getPricePerUst: getEtherPricePerUst,
+      getPricePerBusd: getEtherPricePerBusd,
     },
   },
 }

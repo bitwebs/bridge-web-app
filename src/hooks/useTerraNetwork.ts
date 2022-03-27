@@ -10,7 +10,7 @@ export const defaultTerraNetworks: Record<TerraNetworkEnum, LocalTerraNetwork> =
       chainID: 'columbus-5',
       lcd: 'https://lcd.terra.dev',
       fcd: 'https://fcd.terra.dev',
-      mantle: 'https://mantle.terra.dev',
+      mantle: 'https://mantle.iqchain.network',
       walletconnectID: 1,
       shuttle: {
         ethereum: 'terra13yxhrk08qvdf5zdc9ss5mwsg5sf7zva9xrgwgc',
@@ -21,9 +21,9 @@ export const defaultTerraNetworks: Record<TerraNetworkEnum, LocalTerraNetwork> =
     testnet: {
       name: TerraNetworkEnum.testnet,
       chainID: 'bombay-12',
-      lcd: 'https://bombay-lcd.terra.dev',
-      fcd: 'https://bombay-fcd.terra.dev',
-      mantle: 'https://bombay-mantle.terra.dev',
+      lcd: 'https://mcafee-lcd.iqchain.network',
+      fcd: 'https://mcafee-fcd.iqchain.network',
+      mantle: 'https://mcafee-mantle.iqchain.network',
       walletconnectID: 0,
       shuttle: {
         ethereum: 'terra1skc56hrrg92zj8xxj6lyjlt2l2m8q8sf832sqm',

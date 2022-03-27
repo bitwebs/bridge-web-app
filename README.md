@@ -8,8 +8,8 @@ Users can connect their wallets to the Terra Bridge web app through a browser pl
 
 | Blockchain | Supported Wallets                                                                                                                                                                                                                          |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Terra      | [Terra Station Extension](https://terra.money/extension)                                                                                                                                                                                   |
-| Ethereum   | [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en), [CoinBase](https://wallet.coinbase.com/) or [Trustwallet](https://trustwallet.com/) for [WalletConnect](https://walletconnect.org/) |
+| Terra      | [Terra Station Extension](https://iqchain.network/extension)                                                                                                                                                                                   |
+| Ethereum   | [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en), [CoinBase](https://wallet.coinbase.com/) or [Trbusdwallet](https://trbusdwallet.com/) for [WalletConnect](https://walletconnect.org/) |
 | BSC        | [Binance Chain Wallet](https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp?hl=en) or [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)     |
 
 ## Instructions

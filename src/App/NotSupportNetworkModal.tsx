@@ -40,7 +40,7 @@ const NotSupportNetworkModal = (): ReactElement => {
         },
       }}
       header={
-        <Text style={{ justifyContent: 'center' }}>UNSUPPORTED NETWORK</Text>
+        <Text style={{ jbusdifyContent: 'center' }}>UNSUPPORTED NETWORK</Text>
       }
     >
       <StyledContainer>

@@ -64,7 +64,7 @@ import {
 import EventManager from '@walletconnect/core/dist/cjs/events'
 import SessionStorage from '@walletconnect/core/dist/cjs/storage'
 
-import CustomTransport from '../socket-transport'
+import CbusdomTransport from '../socket-transport'
 
 // -- Connector ------------------------------------------------------------ //
 
@@ -150,7 +150,7 @@ class Connector implements IConnector {
       )
     }
 
-    this._transport = new CustomTransport({
+    this._transport = new CbusdomTransport({
       protocol: this.protocol,
       version: this.version,
       url: this.bridge,
@@ -730,7 +730,7 @@ class Connector implements IConnector {
     })
   }
 
-  public async sendCustomRequest(
+  public async sendCbusdomRequest(
     request: Partial<IJsonRpcRequest>,
     options?: IRequestOptions
   ) {

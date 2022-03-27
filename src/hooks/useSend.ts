@@ -195,7 +195,7 @@ const useSend = (): UseSendType => {
     if (terraExt) {
       let gas = 200000
       try {
-        let feeDenoms = [AssetNativeDenomEnum.uusd]
+        let feeDenoms = [AssetNativeDenomEnum.ubusd]
         const ownedAssetList = assetList.filter(
           (x) => _.toNumber(x.balance) > 0
         )
@@ -230,7 +230,7 @@ const useSend = (): UseSendType => {
 
         gas = unsignedTx.auth_info.fee.gas_limit
       } catch {
-        // gas is just default value
+        // gas is jbusd default value
       }
 
       return _.map(AssetNativeDenomEnum, (denom) => {
@@ -300,7 +300,7 @@ const useSend = (): UseSendType => {
           : await getAxelarAddress(
               toAddress,
               toBlockChain as 'avalanche' | 'fantom',
-              asset.terraToken as 'uusd' | 'uluna'
+              asset.terraToken as 'ubusd' | 'uluna'
             )
 
         return [
@@ -340,7 +340,7 @@ const useSend = (): UseSendType => {
       toBlockChain === BlockChainType.terra
         ? // only terra network can get user's memo
           memo
-        : // if send to ether-base then memo must be to-address
+        : // if send to ether-base then memo mbusd be to-address
           toAddress
     const msgs = await getTerraMsgs()
 
@@ -358,7 +358,7 @@ const useSend = (): UseSendType => {
         fee: tx.fee?.toJSON(),
         memo: tx.memo,
         gasPrices: tx.gasPrices?.toString(),
-        gasAdjustment: tx.gasAdjustment?.toString(),
+        gasAdjbusdment: tx.gasAdjbusdment?.toString(),
         feeDenoms: tx.feeDenoms,
       }
 
@@ -373,7 +373,7 @@ const useSend = (): UseSendType => {
         window.location.href = `terrastation://walletconnect_confirm/?payload=${payload}`
       }
       try {
-        const result = await connector.sendCustomRequest({
+        const result = await connector.sendCbusdomRequest({
           id: sendId,
           method: 'post',
           params: [serializedTxOptions],

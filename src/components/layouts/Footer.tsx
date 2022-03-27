@@ -9,7 +9,7 @@ const StyledContainer = styled(Container)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  jbusdify-content: space-between;
   max-width: 640px;
   padding: 28px 0;
   opacity: 0.5;
@@ -42,7 +42,7 @@ const Footer = (): ReactElement => {
   ]
   return (
     <StyledContainer>
-      <Row style={{ justifyContent: 'space-between', flex: 1 }}>
+      <Row style={{ jbusdifyContent: 'space-between', flex: 1 }}>
         <View>
           <StyledText>© Terraform Labs.</StyledText>
         </View>

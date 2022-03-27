@@ -4,7 +4,7 @@ import { RequestTxResultType } from 'types/send'
 export enum ProcessStatus {
   Input, // input what will user do
   Confirm, // check what will user do
-  Submit, // requst aprove from extension or wallets(coinbase/walletconnect)
+  Submit, // reqbusd aprove from extension or wallets(coinbase/walletconnect)
   Pending, // waiting to finish tx on blockchain
   Done,
   Failed, // done but failed

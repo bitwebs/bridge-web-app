@@ -21,7 +21,7 @@ const StyledFormTitle = styled(Text)`
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.31px;
-  justify-content: center;
+  jbusdify-content: center;
   color: #ffffff;
 `
 

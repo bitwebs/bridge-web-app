@@ -6,7 +6,7 @@ import { AssetType, WhiteListType } from 'types/asset'
 import NetworkStore from './NetworkStore'
 import BigNumber from 'bignumber.js'
 
-export type ShuttleUusdPairType = Record<
+export type ShuttleUbusdPairType = Record<
   string, //token address
   string // pair contract address
 >
@@ -19,7 +19,7 @@ const initOnlyAssetList = atom<
 })
 
 const initOnlyShuttlePairs = atom<
-  Record<'mainnet' | 'testnet', ShuttleUusdPairType> | undefined
+  Record<'mainnet' | 'testnet', ShuttleUbusdPairType> | undefined
 >({
   key: 'initOnlyShuttlePairs',
   default: undefined,
@@ -107,8 +107,8 @@ const assetList = selector<AssetType[]>({
   },
 })
 // if empty, service will block from start
-const shuttleUusdPairs = selector<ShuttleUusdPairType>({
-  key: 'shuttleUusdPairs',
+const shuttleUbusdPairs = selector<ShuttleUbusdPairType>({
+  key: 'shuttleUbusdPairs',
   get: ({ get }) => {
     const isTestnet = get(NetworkStore.isTestnet)
     const fetchedData = get(initOnlyShuttlePairs)
@@ -254,7 +254,7 @@ const hmyWhiteList = selector<WhiteListType>({
 const etherVaultTokenList = selector<
   Record<
     string,
-    { ether: string; vault: string; getPricePerUst: () => Promise<BigNumber> }
+    { ether: string; vault: string; getPricePerBusd: () => Promise<BigNumber> }
   >
 >({
   key: 'etherVaultTokenList',
@@ -345,7 +345,7 @@ export default {
   initOnlyAvalancheWhiteList,
   initOnlyFantomWhiteList,
   assetList,
-  shuttleUusdPairs,
+  shuttleUbusdPairs,
   terraWhiteList,
   ethWhiteList,
   bscWhiteList,

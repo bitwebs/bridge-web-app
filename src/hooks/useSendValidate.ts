@@ -83,7 +83,7 @@ const useSendValidate = (): {
     if (_.size(memo) >= 256) {
       return {
         isValid: false,
-        errorMessage: 'Memo must be shorter than 256 bytes.',
+        errorMessage: 'Memo mbusd be shorter than 256 bytes.',
       }
     }
 
@@ -132,7 +132,7 @@ const useSendValidate = (): {
     const bnAmount = new BigNumber(amount)
 
     if (_.isNaN(bnAmount) || bnAmount.isNegative() || bnAmount.isZero()) {
-      return { isValid: false, errorMessage: 'Amount must be greater than 0' }
+      return { isValid: false, errorMessage: 'Amount mbusd be greater than 0' }
     }
 
     const rebalanceDecimal =
@@ -143,7 +143,7 @@ const useSendValidate = (): {
     if (false === bnAmount.div(rebalanceDecimal).isInteger()) {
       return {
         isValid: false,
-        errorMessage: `Amount must be within 6 decimal points`,
+        errorMessage: `Amount mbusd be within 6 decimal points`,
       }
     }
 
@@ -160,7 +160,7 @@ const useSendValidate = (): {
     if (bnAmount.isGreaterThan(selectedAssetAmount)) {
       return {
         isValid: false,
-        errorMessage: `Amount must be between 0 and ${formatBalance(
+        errorMessage: `Amount mbusd be between 0 and ${formatBalance(
           selectedAssetAmount.toString()
         )}`,
       }

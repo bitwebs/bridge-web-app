@@ -4,18 +4,18 @@ const TERRA_DECIMAL = 1e6
 const ETHER_BASE_DECIMAL = 1e18
 
 const symbolOfDenom: Record<AssetNativeDenomEnum, AssetSymbolEnum> = {
-  [AssetNativeDenomEnum.ukrw]: AssetSymbolEnum.KRT,
-  [AssetNativeDenomEnum.uusd]: AssetSymbolEnum.UST,
+  [AssetNativeDenomEnum.ubkrw]: AssetSymbolEnum.KRT,
+  [AssetNativeDenomEnum.ubusd]: AssetSymbolEnum.BUSD,
   [AssetNativeDenomEnum.uluna]: AssetSymbolEnum.Luna,
-  [AssetNativeDenomEnum.usdr]: AssetSymbolEnum.SDT,
-  [AssetNativeDenomEnum.umnt]: AssetSymbolEnum.MNT,
+  [AssetNativeDenomEnum.ubsdr]: AssetSymbolEnum.BSDT,
+  [AssetNativeDenomEnum.ubmnt]: AssetSymbolEnum.BBMNT,
 }
 
 const terraDenoms = {
-  [symbolOfDenom[AssetNativeDenomEnum.ukrw]]: AssetNativeDenomEnum.ukrw,
-  [symbolOfDenom[AssetNativeDenomEnum.uusd]]: AssetNativeDenomEnum.uusd,
-  [symbolOfDenom[AssetNativeDenomEnum.usdr]]: AssetNativeDenomEnum.usdr,
-  [symbolOfDenom[AssetNativeDenomEnum.umnt]]: AssetNativeDenomEnum.umnt,
+  [symbolOfDenom[AssetNativeDenomEnum.ubkrw]]: AssetNativeDenomEnum.ubkrw,
+  [symbolOfDenom[AssetNativeDenomEnum.ubusd]]: AssetNativeDenomEnum.ubusd,
+  [symbolOfDenom[AssetNativeDenomEnum.ubsdr]]: AssetNativeDenomEnum.ubsdr,
+  [symbolOfDenom[AssetNativeDenomEnum.ubmnt]]: AssetNativeDenomEnum.ubmnt,
 }
 
 const nativeDenoms = {

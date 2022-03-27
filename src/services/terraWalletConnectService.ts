@@ -19,7 +19,7 @@ export class WalletConnect extends Connector {
 
 const connect = async (): Promise<WalletConnect> => {
   // bridge url
-  const bridge = 'https://walletconnect.terra.dev/'
+  const bridge = 'https://walletconnect.iqchain.network/'
 
   // create new connector
   const connector = new WalletConnect({

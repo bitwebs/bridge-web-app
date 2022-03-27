@@ -14,32 +14,32 @@ const defaultList: AssetType[] = [
   {
     symbol: AssetSymbolEnum.Luna,
     name: 'Luna',
-    logoURI: 'https://assets.terra.money/icon/60/Luna.png',
+    logoURI: 'https://assets.iqchain.network/icon/60/Luna.png',
     terraToken: AssetNativeDenomEnum.uluna,
   },
   {
-    symbol: AssetSymbolEnum.UST,
-    name: 'Terra USD',
-    logoURI: 'https://assets.terra.money/icon/60/UST.png',
-    terraToken: AssetNativeDenomEnum.uusd,
+    symbol: AssetSymbolEnum.BUSD,
+    name: 'Terra BUSD',
+    logoURI: 'https://assets.iqchain.network/icon/60/BUSD.png',
+    terraToken: AssetNativeDenomEnum.ubusd,
   },
   {
     symbol: AssetSymbolEnum.KRT,
-    name: 'Terra KRW',
-    logoURI: 'https://assets.terra.money/icon/60/KRT.png',
-    terraToken: AssetNativeDenomEnum.ukrw,
+    name: 'Terra BKRW',
+    logoURI: 'https://assets.iqchain.network/icon/60/KRT.png',
+    terraToken: AssetNativeDenomEnum.ubkrw,
   },
   {
-    symbol: AssetSymbolEnum.SDT,
-    name: 'Terra SDR',
-    logoURI: 'https://assets.terra.money/icon/60/SDT.png',
-    terraToken: AssetNativeDenomEnum.usdr,
+    symbol: AssetSymbolEnum.BSDT,
+    name: 'Terra BSDR',
+    logoURI: 'https://assets.iqchain.network/icon/60/BSDT.png',
+    terraToken: AssetNativeDenomEnum.ubsdr,
   },
   {
-    symbol: AssetSymbolEnum.MNT,
-    name: 'Terra MNT',
-    logoURI: 'https://assets.terra.money/icon/60/MNT.png',
-    terraToken: AssetNativeDenomEnum.umnt,
+    symbol: AssetSymbolEnum.BBMNT,
+    name: 'Terra BBMNT',
+    logoURI: 'https://assets.iqchain.network/icon/60/BBMNT.png',
+    terraToken: AssetNativeDenomEnum.ubmnt,
   },
 ]
 
@@ -200,10 +200,10 @@ const useApp = (): {
             },
             {
               [AssetNativeDenomEnum.uluna]: AssetNativeDenomEnum.uluna,
-              [AssetNativeDenomEnum.uusd]: AssetNativeDenomEnum.uusd,
-              [AssetNativeDenomEnum.ukrw]: AssetNativeDenomEnum.ukrw,
-              [AssetNativeDenomEnum.usdr]: AssetNativeDenomEnum.usdr,
-              [AssetNativeDenomEnum.umnt]: AssetNativeDenomEnum.umnt,
+              [AssetNativeDenomEnum.ubusd]: AssetNativeDenomEnum.ubusd,
+              [AssetNativeDenomEnum.ubkrw]: AssetNativeDenomEnum.ubkrw,
+              [AssetNativeDenomEnum.ubsdr]: AssetNativeDenomEnum.ubsdr,
+              [AssetNativeDenomEnum.ubmnt]: AssetNativeDenomEnum.ubmnt,
             }
           )
           result[network] = val

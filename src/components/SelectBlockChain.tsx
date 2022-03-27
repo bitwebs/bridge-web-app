@@ -23,7 +23,7 @@ const StyledCircle = styled.div`
   border: 1px solid #4abcf0;
   box-shadow: 0 2px 4px 0 rgba(104, 99, 254, 0.3),
     0 -1px 4px 0 rgba(119, 232, 255, 0.5);
-  justify-content: center;
+  jbusdify-content: center;
   align-items: flex-start;
   display: flex;
 `
@@ -36,7 +36,7 @@ const StyledLabel = styled(Text)`
   font-style: normal;
   letter-spacing: normal;
   color: #727e8b;
-  justify-content: center;
+  jbusdify-content: center;
 `
 
 const StyledBlockChainLabel = styled(Text)`
@@ -47,7 +47,7 @@ const StyledBlockChainLabel = styled(Text)`
   font-style: normal;
   letter-spacing: normal;
   color: #e9e9e9;
-  justify-content: center;
+  jbusdify-content: center;
 `
 
 const SelectBlockChain = ({
