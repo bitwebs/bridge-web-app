@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 
-// jbusd request transaction, it's not finished
+// just request transaction, it's not finished
 export type RequestTxResultType =
   | {
       success: true

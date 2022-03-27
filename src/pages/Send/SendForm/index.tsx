@@ -254,7 +254,7 @@ const SendForm = ({
   return (
     <StyledContainer>
       <StyledFormSection>
-        <Row style={{ jbusdifyContent: 'space-between' }}>
+        <Row style={{ justifyContent: 'space-between' }}>
           <FormLabel title={'Asset'} />
           <RefreshButton />
         </Row>

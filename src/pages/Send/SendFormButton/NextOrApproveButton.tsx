@@ -60,7 +60,7 @@ const NextOrApproveButton = ({
           {waitingForApprove ? (
             <CircularProgress size={20} style={{ color: COLOR.darkGray2 }} />
           ) : (
-            <Row style={{ jbusdifyContent: 'center' }}>
+            <Row style={{ justifyContent: 'center' }}>
               <Lock style={{ paddingRight: 5 }} /> Unlock token to send
             </Row>
           )}

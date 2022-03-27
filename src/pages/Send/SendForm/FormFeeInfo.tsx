@@ -150,7 +150,7 @@ const FormFeeInfo = ({
                   paddingTop: 6,
                   paddingBottom: 6,
                   margin: 0,
-                  jbusdifyContent: 'space-between',
+                  justifyContent: 'space-between',
                 }}
               >
                 <View>
@@ -161,7 +161,7 @@ const FormFeeInfo = ({
                 <Row style={{ alignItems: 'center' }}>
                   <Text
                     style={{
-                      jbusdifyContent: 'flex-end',
+                      justifyContent: 'flex-end',
                       paddingRight: 10,
                       opacity: 0.8,
                     }}
@@ -192,7 +192,7 @@ const FormFeeInfo = ({
                   />
                 </Row>
               </Row>
-              <View style={{ jbusdifyContent: 'flex-end' }}>
+              <View style={{ justifyContent: 'flex-end' }}>
                 <FormErrorMessage
                   errorMessage={feeValidationResult.errorMessage}
                 />
@@ -206,7 +206,7 @@ const FormFeeInfo = ({
                       paddingTop: 6,
                       paddingBottom: 12,
                       margin: 0,
-                      jbusdifyContent: 'space-between',
+                      justifyContent: 'space-between',
                     }}
                   >
                     <View>
@@ -216,7 +216,7 @@ const FormFeeInfo = ({
                     </View>
                     <View>
                       <Text
-                        style={{ jbusdifyContent: 'flex-end', opacity: '0.8' }}
+                        style={{ justifyContent: 'flex-end', opacity: '0.8' }}
                       >
                         {`${formatBalance(bridgeFee)} ${asset?.symbol}`}
                       </Text>
@@ -227,7 +227,7 @@ const FormFeeInfo = ({
                       paddingTop: 12,
                       margin: 0,
                       borderTop: 'solid 1px #2e2e2e',
-                      jbusdifyContent: 'space-between',
+                      justifyContent: 'space-between',
                     }}
                   >
                     <View>
@@ -238,7 +238,7 @@ const FormFeeInfo = ({
                     <View style={{ padding: 0, alignItems: 'flex-start' }}>
                       <Text
                         style={{
-                          jbusdifyContent: 'flex-end',
+                          justifyContent: 'flex-end',
                           opacity: '0.8',
                           color: amountAfterFee.isLessThanOrEqualTo(0)
                             ? COLOR.red

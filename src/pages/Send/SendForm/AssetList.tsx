@@ -91,7 +91,7 @@ const AssetItem = ({
         setShowModal(false)
       }}
     >
-      <Row style={{ jbusdifyContent: 'space-between' }}>
+      <Row style={{ justifyContent: 'space-between' }}>
         <Row>
           <StyledIconBox>
             <FormImage src={asset.logoURI} size={20} />
@@ -106,7 +106,7 @@ const AssetItem = ({
           </View>
         </Row>
         {isLoggedIn && (
-          <View style={{ jbusdifyContent: 'center' }}>
+          <View style={{ justifyContent: 'center' }}>
             <Text style={{ fontSize: 14 }}>
               {asset.balance ? formatBalance(asset.balance) : '0'}{' '}
             </Text>
@@ -147,7 +147,7 @@ const SelectAssetButton = ({
             {isLoggedIn && (
               <Text
                 style={{
-                  jbusdifyContent: 'flex-end',
+                  justifyContent: 'flex-end',
                   marginRight: 10,
                   fontWeight: 'normal',
                   color: '#A3A3A3',
@@ -216,7 +216,7 @@ const AssetList = ({
             setShowModal(false)
           },
         }}
-        header={<Text style={{ jbusdifyContent: 'center' }}>Select Asset</Text>}
+        header={<Text style={{ justifyContent: 'center' }}>Select Asset</Text>}
       >
         <StyledContainer>
           <div

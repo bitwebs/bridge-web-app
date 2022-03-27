@@ -23,7 +23,7 @@ const StyledContainer = styled.div`
 
 const StyledSection = styled.div`
   display: flex;
-  jbusdify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -72,7 +72,7 @@ const StyledSecDText2 = styled(Text)`
 
 const StyledSpaceBetween = styled.div`
   width: 100%;
-  jbusdify-content: space-between;
+  justify-content: space-between;
   display: flex;
   align-items: center;
 `

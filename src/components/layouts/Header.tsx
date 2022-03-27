@@ -31,7 +31,7 @@ const StyledNavContainer = styled(Container)`
 const StyledNav = styled(View)`
   display: flex;
   flex-direction: row;
-  jbusdify-content: space-between;
+  justify-content: space-between;
   padding-top: 47px;
   padding-bottom: 19px;
   @media ${STYLE.media.mobile} {
@@ -107,7 +107,7 @@ const StyledDropdownMenu = styled(View)`
   bottom: 0;
   height: 40px;
   margin-bottom: -40px;
-  jbusdify-content: center;
+  justify-content: center;
   animation: ${dropdownKeyframes} 0.3s ease;
   background-color: #484848;
   border-radius: ${STYLE.css.borderRadius};

@@ -77,7 +77,7 @@
       "@typescript-eslint/explicit-function-return-type": "error",
       "@typescript-eslint/no-unused-vars": "error",
       "import/no-anonymous-default-export": "off",
-      "react-hooks/exhabusdive-deps": "off"
+      "react-hooks/exhaustivee-deps": "off"
     }
   },
   "husky": {

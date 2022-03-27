@@ -27,7 +27,7 @@ const StyledWalletButton = styled(Button)`
 const StyledButtonContents = styled.div`
   display: flex;
   flex-direction: row;
-  jbusdify-content: space-between;
+  justify-content: space-between;
   align-items: center;
 `
 

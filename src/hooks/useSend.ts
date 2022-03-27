@@ -230,7 +230,7 @@ const useSend = (): UseSendType => {
 
         gas = unsignedTx.auth_info.fee.gas_limit
       } catch {
-        // gas is jbusd default value
+        // gas is just default value
       }
 
       return _.map(AssetNativeDenomEnum, (denom) => {
@@ -340,7 +340,7 @@ const useSend = (): UseSendType => {
       toBlockChain === BlockChainType.terra
         ? // only terra network can get user's memo
           memo
-        : // if send to ether-base then memo mbusd be to-address
+        : // if send to ether-base then memo must be to-address
           toAddress
     const msgs = await getTerraMsgs()
 
@@ -358,7 +358,7 @@ const useSend = (): UseSendType => {
         fee: tx.fee?.toJSON(),
         memo: tx.memo,
         gasPrices: tx.gasPrices?.toString(),
-        gasAdjbusdment: tx.gasAdjbusdment?.toString(),
+        gasAdjustment: tx.gasAdjustment?.toString(),
         feeDenoms: tx.feeDenoms,
       }
 
@@ -373,7 +373,7 @@ const useSend = (): UseSendType => {
         window.location.href = `terrastation://walletconnect_confirm/?payload=${payload}`
       }
       try {
-        const result = await connector.sendCbusdomRequest({
+        const result = await connector.sendCusdomRequest({
           id: sendId,
           method: 'post',
           params: [serializedTxOptions],

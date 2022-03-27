@@ -37,7 +37,7 @@ const StyledProcessCircle = styled.div`
   box-shadow: 0 2px 4px 0 rgba(15, 15, 24, 0.3),
     0 -1px 4px 0 rgba(119, 232, 255, 0.5);
   align-items: center;
-  jbusdify-content: center;
+  justify-content: center;
 `
 
 const StyledContainer = styled(Container)`

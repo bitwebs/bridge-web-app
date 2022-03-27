@@ -235,7 +235,7 @@ const SelectEtherBaseWalletModal = (): ReactElement => {
           setIsVisibleModalType(undefined)
         },
       }}
-      header={<Text style={{ jbusdifyContent: 'center' }}>Connect Wallet</Text>}
+      header={<Text style={{ justifyContent: 'center' }}>Connect Wallet</Text>}
     >
       <StyledContainer>
         {buttons.map((wallet, i) => (
